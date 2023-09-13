@@ -41,10 +41,13 @@ def main():
     st.caption("Attack detection system")
     df = load_data()
 
-    arp_opcode, arp_hw_size, icmp_checksum = side_bar()
-    st.write(arp_opcode, arp_hw_size, icmp_checksum)
+    arp_opcode, arp_hw_size, icmp_checksum, icmp_seq_le, icmp_unused, http_content_length, http_request_method, http_referer, http_request_version, http_response, http_tls_port, tcp_ack, tcp_ack_raw, tcp_checksum, tcp_connection_fin, tcp_connection_rst = side_bar()
+
+    st.write(arp_opcode, arp_hw_size, icmp_checksum, icmp_seq_le, icmp_unused, http_content_length, http_request_method, http_referer,
+             http_request_version, http_response, http_tls_port, tcp_ack, tcp_ack_raw, tcp_checksum, tcp_connection_fin, tcp_connection_rst)
     df = load_data()
-    filtered_df = filter_data(df, arp_opcode, arp_hw_size, icmp_checksum)
+    filtered_df = filter_data(df, arp_opcode, arp_hw_size, icmp_checksum, icmp_seq_le, icmp_unused, http_content_length, http_request_method,
+                              http_referer, http_request_version, http_response, http_tls_port, tcp_ack, tcp_ack_raw, tcp_checksum, tcp_connection_fin, tcp_connection_rst)
     st.write(filtered_df)
     plot_3d(df, ['tcp.checksum', 'icmp.seq_le', 'icmp.checksum',
             'Attack_type'], title='The Plot of the Attack_type')
