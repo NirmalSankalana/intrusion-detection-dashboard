@@ -84,7 +84,7 @@ def side_bar():
     # Feature 14
     tcp_connection_fin = st.sidebar.slider(
         "tcp.connection.fin",
-        0, 1, 2, 3
+        0.0, 1.0
     )
 
     # Feature 15
