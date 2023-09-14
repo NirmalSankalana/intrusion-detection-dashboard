@@ -92,4 +92,84 @@ def side_bar():
         "tcp.connection.rst",
         (0, 1)
     )
-    return arp_opcode, arp_hw_size, icmp_checksum, icmp_seq_le, icmp_unused, http_content_length, http_request_method, http_referer, http_request_version, http_response, http_tls_port, tcp_ack, tcp_ack_raw, tcp_checksum, tcp_connection_fin, tcp_connection_rst
+
+    # Feature 16
+    tcp_connection_syn = st.sidebar.selectbox(
+        "tcp.connection.syn",
+        (0, 1)
+    )
+
+    # Feature 17
+    tcp_connection_synack = st.sidebar.selectbox(
+        "tcp.connection.synack",
+        (0, 1)
+    )
+
+    # Feature 18
+    tcp_flags = st.sidebar.slider(
+        'tcp.flags',
+        0.0, 1.0)
+
+    # Feature 19
+    tcp_flags_ack = st.sidebar.selectbox(
+        "tcp.flags.ack",
+        (0, 1)
+    )
+
+    # Feature 20
+    tcp_len	 = st.sidebar.slider(
+        'tcp.len',
+        0.0, 1.0)
+    
+    # Feature 21
+    tcp_seq	 = st.sidebar.slider(
+        'tcp.seq',
+        0.0, 1.0)
+    
+    # Feature 22
+    udp_stream	 = st.sidebar.slider(
+        'udp.stream',
+        0.0, 1.0)
+    
+    # Feature 23
+    udp_time_delta = st.sidebar.slider(
+        'udp.time_delta',
+        0.0, 1.0)
+    
+    # Feature 24
+    dns_qry_name = st.sidebar.slider(
+        'dns.qry.name',
+        0.0, 1.0)
+    
+    # Feature 25
+    dns_qry_name_len = st.sidebar.slider(
+        'dns.qry.name.len',
+        0.0, 1.0)
+    
+    # Feature 26
+    dns_qry_qu = st.sidebar.slider(
+        'dns.qry.qu',
+        0.0, 1.0)
+    
+    # Feature 27
+    dns_qry_type = st.sidebar.slider(
+        'dns.qry.type',
+        0.0, 1.0)
+    
+    # Feature 28
+    dns_retransmission = st.sidebar.slider(
+        'dns.retransmission',
+        0.0, 1.0)
+    
+    # Feature 29
+    dns_retransmit_request = st.sidebar.selectbox(
+        "dns.retransmit_request	",
+        (0, 1)
+    )
+
+    # Feature 30
+    dns_retransmit_request_in = st.sidebar.slider(
+        'dns.retransmit_request_in',
+        0.0, 1.0)
+
+    return arp_opcode, arp_hw_size, icmp_checksum, icmp_seq_le, icmp_unused, http_content_length, http_request_method, http_referer, http_request_version, http_response, http_tls_port, tcp_ack, tcp_ack_raw, tcp_checksum, tcp_connection_fin, tcp_connection_rst, tcp_connection_syn, tcp_connection_synack, tcp_flags, tcp_flags_ack, tcp_len, tcp_seq, udp_stream, udp_time_delta, dns_qry_name, dns_qry_name_len, dns_qry_qu, dns_qry_type, dns_retransmission, dns_retransmit_request, dns_retransmit_request_in

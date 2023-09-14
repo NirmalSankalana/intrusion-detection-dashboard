@@ -1,3 +1,9 @@
+import streamlit as st
+
+import plotly.graph_objects as go
+import plotly.express as px
+
+
 def plot_3d(df, xyzk, title):
     fig = go.Figure(data=[go.Scatter3d(
         x=df[xyzk[0]],
@@ -23,5 +29,5 @@ def plot_3d(df, xyzk, title):
         width=800,
         height=600
     )
-    
-    fig.show()
+
+    st.plotly_chart(fig)  # Display the Plotly figure in Streamlit
