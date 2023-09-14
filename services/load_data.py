@@ -19,6 +19,6 @@ def filter_data(df, filters):
             filtered_df = filtered_df[filtered_df[feature] == value]
 
     if filtered_df.empty:
-        return "No data for the given critaria"
+        return None
     else:
         return filtered_df
