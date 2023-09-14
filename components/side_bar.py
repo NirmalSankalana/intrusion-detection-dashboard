@@ -171,5 +171,96 @@ def side_bar():
     dns_retransmit_request_in = st.sidebar.slider(
         'dns.retransmit_request_in',
         0.0, 1.0)
+    
+    # Feature 31
+    mqtt_conack_flags = st.sidebar.selectbox(
+        "mqtt.conack.flags",
+        (0.0, 0.5, 1.0)
+    )
 
-    return arp_opcode, arp_hw_size, icmp_checksum, icmp_seq_le, icmp_unused, http_content_length, http_request_method, http_referer, http_request_version, http_response, http_tls_port, tcp_ack, tcp_ack_raw, tcp_checksum, tcp_connection_fin, tcp_connection_rst, tcp_connection_syn, tcp_connection_synack, tcp_flags, tcp_flags_ack, tcp_len, tcp_seq, udp_stream, udp_time_delta, dns_qry_name, dns_qry_name_len, dns_qry_qu, dns_qry_type, dns_retransmission, dns_retransmit_request, dns_retransmit_request_in
+    # Feature 32
+    mqtt_conflag_cleansess = st.sidebar.selectbox(
+        "mqtt.conflag.cleansess",
+        (0.0, 1.0)
+    )
+
+    # Feature 33
+    mqtt_conflags = st.sidebar.selectbox(
+        "mqtt.conflags",
+        (0.0, 1.0)
+    )
+
+    # Feature 34
+    mqtt_hdrflags = st.sidebar.selectbox(
+        "mqtt.hdrflags",
+        (0.0, 0.25, 0.5, 0.75, 1.0)
+    )
+
+    # Feature 35
+    mqtt_len = st.sidebar.slider(
+        'mqtt.len',
+        0.0, 1.0)
+    
+    # Feature 36
+    mqtt_msg_decoded_as = st.sidebar.slider(
+        'mqtt.msg_decoded_as',
+        0.0, 1.0)
+    
+    # Feature 37
+    mqtt_msgtype = st.sidebar.selectbox(
+        "mqtt.msgtype",
+        (0.0, 0.25, 0.5, 0.75, 1.0)
+    )
+
+    # Feature 38
+    mqtt_proto_len = st.sidebar.selectbox(
+        "mqtt.proto_len",
+        (0.0, 1.0)
+    )
+
+    # Feature 39
+    mqtt_protoname = st.sidebar.selectbox(
+        "mqtt.protoname",
+        (0.0, 0.5, 1.0)
+    )
+
+    # Feature 40
+    mqtt_topic = st.sidebar.selectbox(
+        "mqtt.topic",
+        (0.0, 0.5, 1.0)
+    )
+
+    # Feature 41
+    mqtt_topic_len = st.sidebar.selectbox(
+        "mqtt.topic_len",
+        (0.0, 1.0)
+    )
+
+    # Feature 42
+    mqtt_ver = st.sidebar.selectbox(
+        "mqtt.ver",
+        (0.0, 1.0)
+    )
+
+    # Feature 43
+    mbtcp_len = st.sidebar.slider(
+        'mbtcp.len',
+        0.0, 1.0)
+    
+    # Feature 44
+    mbtcp_trans_id = st.sidebar.slider(
+        'mbtcp.trans_id',
+        0.0, 1.0)
+    
+    # Feature 45
+    mbtcp_unit_id = st.sidebar.slider(
+        'mbtcp.unit_id',
+        0.0, 1.0)
+    
+    # Feature 46
+    Attack_label = st.sidebar.selectbox(
+        "Attack_label",
+        (0.0, 1.0)
+    )
+
+    return arp_opcode, arp_hw_size, icmp_checksum, icmp_seq_le, icmp_unused, http_content_length, http_request_method, http_referer, http_request_version, http_response, http_tls_port, tcp_ack, tcp_ack_raw, tcp_checksum, tcp_connection_fin, tcp_connection_rst, tcp_connection_syn, tcp_connection_synack, tcp_flags, tcp_flags_ack, tcp_len, tcp_seq, udp_stream, udp_time_delta, dns_qry_name, dns_qry_name_len, dns_qry_qu, dns_qry_type, dns_retransmission, dns_retransmit_request, dns_retransmit_request_in, mqtt_conack_flags, mqtt_conflag_cleansess, mqtt_conflags, mqtt_hdrflags, mqtt_len, mqtt_msg_decoded_as, mqtt_msgtype, mqtt_proto_len, mqtt_protoname, mqtt_topic, mqtt_topic_len, mqtt_ver, mbtcp_len, mbtcp_trans_id, mbtcp_unit_id, Attack_label
