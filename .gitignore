@@ -5,8 +5,7 @@ __pycache__/
 env/
 
 analysis/
-model/
+
 
 .vscode
 .ipynb
-.pkl
