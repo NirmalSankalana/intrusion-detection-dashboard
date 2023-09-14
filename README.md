@@ -11,6 +11,7 @@ How to set up the project.
 5. After stop the project, deactivate virtual environment : deactivate
 
 Run project
+1. add your machine learning model to the `/model` directory. Name should be `finalmodel.pkl`.
 
 1. `streamlit run home.py`
 

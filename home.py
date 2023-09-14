@@ -35,6 +35,8 @@ def main():
     else:
         st.error(f"{attact_label[0]}")
 
+    st.write("Accuracy: 93")
+
     df = load_data()
     get_description(df)
 
