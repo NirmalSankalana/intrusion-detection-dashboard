@@ -1,6 +1,7 @@
 import streamlit as st
 import numpy as np
 
+
 from components.side_bar import side_bar
 
 #services
@@ -9,6 +10,7 @@ from services.get_description import get_description
 
 # graphs
 from graphs.threed_plot import plot_3d
+from graphs.bar_graph import bar_graph, create_attact_count_dataframe
 
 # model
 from services.get_prediction import get_prediction
@@ -27,7 +29,7 @@ def main():
     attact_label = get_prediction(input_data_2d)
 
     # Display the attack type with different colors
-    
+    st.subheader("Attact Type: ")
     if attact_label[0] == "Normal":
         st.success("Normal")
     else:
@@ -42,6 +44,13 @@ def main():
     #    'mqtt.proto_len': mqtt_proto_len, 'mqtt.protoname': mqtt_protoname, 'mqtt.topic': mqtt_topic, 'mqtt.topic_len': mqtt_topic_len, 'mqtt.ver': mqtt_ver, 'mbtcp.len': mbtcp_len, 'mbtcp.trans_id': mbtcp_trans_id, 'mbtcp.unit_id': mbtcp_unit_id, 'Attack_label': Attack_label
     # }
    
+
+    attack_type_counts = df['Attack_type'].value_counts().reset_index()
+    attack_type_counts.columns = ['Attack_type', 'Count']
+
+    # Display the DataFrame with counts
+    attact_type_counts = create_attact_count_dataframe(df)
+    bar_graph(attack_type_counts)
 
 
 
