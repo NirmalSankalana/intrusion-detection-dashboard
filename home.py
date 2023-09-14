@@ -10,8 +10,6 @@ from graphs.threed_plot import plot_3d
 # model
 from services.get_prediction import get_prediction
 
-
-
 def main():
     st.title("Network Attack Detection")
     st.caption("Attack detection system")
@@ -25,10 +23,11 @@ def main():
 
     attact_label = get_prediction(input_data_2d)
 
- 
-
-    st.write(attact_label[0])
-
+    # Display the attack type with different colors
+    if attact_label[0] == "Normal":
+        st.success("Normal")
+    else:
+        st.error(f"{attact_label[0]}", unsafe_allow_html=True)
 
     df = load_data()
 
